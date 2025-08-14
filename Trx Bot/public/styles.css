@@ -1,0 +1,89 @@
+:root {
+  --bg: #0f1115;
+  --card: #161a22;
+  --muted: #8b94a7;
+  --text: #e6edf3;
+  --primary: #e50914;
+  --primary-700: #b40811;
+  --outline: #283041;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--outline);
+  position: sticky;
+  top: 0;
+  background: rgba(15,17,21,0.75);
+  backdrop-filter: blur(8px);
+  z-index: 20;
+}
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand h1 { font-size: 16px; margin: 0; }
+.brand-icon { width: 22px; height: 22px; }
+.user-chip { display: flex; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; }
+.user-chip .dot { width: 4px; height: 4px; background: var(--muted); border-radius: 50%; display: inline-block; }
+
+main { padding: 16px; padding-bottom: 80px; }
+.card { background: var(--card); border: 1px solid var(--outline); border-radius: 14px; padding: 16px; }
+.section { margin-top: 18px; }
+h2 { margin: 0 0 8px 0; font-size: 18px; }
+h3 { margin: 0 0 12px 0; font-size: 14px; color: var(--muted); font-weight: 600; }
+.muted { color: var(--muted); }
+.small { font-size: 12px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.stat { background: #121620; border: 1px solid var(--outline); border-radius: 10px; padding: 10px; }
+.label { font-size: 12px; color: var(--muted); }
+.value { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 16px; margin-top: 6px; }
+
+.balance-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 10px 0 14px; }
+
+.primary, .secondary, .chip { cursor: pointer; border: 1px solid var(--outline); color: var(--text); background: transparent; border-radius: 12px; padding: 10px 14px; font-weight: 600; }
+.primary { background: var(--primary); border-color: var(--primary); }
+.primary:active { background: var(--primary-700); }
+.secondary:active, .chip:active { background: #0c0f16; }
+
+.input { width: 100%; padding: 10px 12px; border-radius: 10px; border: 1px solid var(--outline); background: #0c0f16; color: var(--text); }
+.ref-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; }
+.share-row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+
+.list { display: flex; flex-direction: column; gap: 8px; }
+.list .row { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; background: #121620; border: 1px solid var(--outline); border-radius: 10px; padding: 10px; }
+.badge { padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+.badge.success { background: rgba(0, 200, 83, .15); color: #00c853; }
+.badge.warning { background: rgba(255, 193, 7, .15); color: #ffc107; }
+.badge.danger { background: rgba(229, 9, 20, .15); color: #e50914; }
+
+.form { display: grid; gap: 10px; }
+.form-row { display: grid; gap: 6px; }
+
+.tabbar { position: fixed; bottom: 0; left: 0; right: 0; display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--outline); background: rgba(15,17,21,.75); backdrop-filter: blur(8px); }
+.tabbtn { padding: 12px 8px; color: var(--muted); background: transparent; border: none; cursor: pointer; font-weight: 600; }
+.tabbtn.active { color: var(--text); border-bottom: 2px solid var(--primary); }
+.tab { display: none; }
+.tab.active { display: block; }
+
+.earn-actions { display: flex; align-items: center; gap: 10px; }
+
+.ad-overlay { position: fixed; inset: 0; background: rgba(0,0,0,.8); display: flex; align-items: center; justify-content: center; z-index: 50; }
+.ad-overlay.hidden { display: none; }
+.ad-box { width: min(640px, 92vw); background: #000; border-radius: 12px; padding: 10px; border: 1px solid var(--outline); }
+.ad-video { width: 100%; max-height: 60vh; border-radius: 8px; }
+
+@media (max-width: 400px) {
+  .grid-3 { grid-template-columns: 1fr; }
+  .balance-row { grid-template-columns: 1fr; }
+}
+
+

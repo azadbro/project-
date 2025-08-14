@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/verify-telegram", "destination": "https://us-central1-oject-65bd1.cloudfunctions.net/verifyTelegram" },
+    { "source": "/api/(.*)", "destination": "https://us-central1-oject-65bd1.cloudfunctions.net/apiV1/$1" }
+  ]
+}
+
+

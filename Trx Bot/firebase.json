@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      { "source": "/verify-telegram", "function": "verifyTelegram" },
+      { "source": "/api/**", "function": "apiV1" },
+      { "source": "**", "destination": "/index.html" }
+    ]
+  },
+  "functions": {
+    "source": "functions"
+  },
+  "database": {
+    "rules": "database.rules.json"
+  }
+}
+
+

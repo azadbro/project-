@@ -1,0 +1,19 @@
+{
+  "name": "trx-earn-functions",
+  "type": "module",
+  "private": true,
+  "engines": { "node": "^18" },
+  "scripts": {
+    "serve": "firebase emulators:start --only functions,hosting",
+    "deploy": "firebase deploy --only functions,hosting"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.5.0",
+    "firebase-functions": "^5.0.1",
+    "tweetnacl": "^1.0.3",
+    "express": "^4.19.2",
+    "cors": "^2.8.5"
+  }
+}
+
+
